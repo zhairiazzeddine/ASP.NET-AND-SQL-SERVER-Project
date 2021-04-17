@@ -1,0 +1,52 @@
+﻿.TextBox {
+    border: none;
+    border-bottom: 1.5px solid black;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    background-color: transparent;
+}
+.btnAjouter {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    width: 130px;
+    transition: .3s ease-in-out;
+}
+.btnAjouter:hover {
+    background-color: cornflowerblue;
+}
+
+.btnAjouter:active {
+    background-color: navy;
+}
+
+.btnModifier {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    width: 130px;
+    transition: .3s ease-in-out;
+}
+
+    .btnModifier:hover {
+        background-color: cornflowerblue;
+    }
+
+    .btnModifier:active {
+        background-color: navy;
+    }
+

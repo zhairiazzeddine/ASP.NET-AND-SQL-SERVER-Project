@@ -1,0 +1,130 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/arriere_Plan_Connexion.jpg');
+    background-size: cover;
+    background-repeat:repeat;
+    font-family: sans-serif;
+}
+
+.loginbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    height: 420px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
+}
+
+.LOGO
+{
+    width: 81px;
+    overflow: hidden;
+    top: calc(-75px/2);
+    left: calc(50% - 43px);
+    position: absolute;
+}
+
+h2
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: azure;
+}
+
+
+
+.TnomUtilisateur, .TmotPasse, .btnConnexion {
+    width: 60%;
+    margin-bottom: 25px;
+}
+
+
+
+.TnomUtilisateur {
+    border: none;
+    border-bottom: 1.5px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 190px;
+    width: 250px;
+    background-color: transparent;
+}
+
+
+
+.TmotPasse {
+    border: none;
+    border-bottom: 1.5px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 190px;
+    width: 250px;
+    top: calc(430px/2);
+    background-color: transparent;
+}
+
+
+::placeholder {
+    color: rgba(255,255,255,.5);
+}
+
+.btnConnexion {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    right: 200px;
+    width: 250px;
+    transition: .3s ease-in-out;
+}
+
+.Utilisateur {
+    position: relative;
+    right: -125px;
+    top: calc(76px/2);
+    width: 25px;
+}
+.MotPasse {
+    position: relative;
+    right: -125px;
+    top: calc(136px/2);
+    width: 25px;
+}
+
+.btnConnexion:hover {
+    background-color: cornflowerblue;
+}
+
+.btnConnexion:active {
+    background-color: navy;
+}
+
+.ChangerMotPasse {
+    font-size: 11px;
+    font-weight: 650;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.ChangerMotPasse:hover 
+{
+    text-decoration: underline;
+}
+

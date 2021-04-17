@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page_Maitre.master.cs" Inherits="ZHAIRI_CENTER_ASPNET.Page_Maitre" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Page_Maitre.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+
+        <div class="navbar">
+           
+  <a href="#">Accueil</a>
+  <a href="#">Eléves</a>
+  <a href="#">Inscriptions</a>
+            <a href="#">Abssences</a>
+            <a href="#">Les Dates</a>
+            <a href="#">Matieres</a>
+            <a href="#">Réglements</a>
+            <a href="#">Classes</a>
+            <a href="#">Professeurs</a>
+            <a href="#">Cours</a>
+  <div class="dropdown">
+    <button class="dropbtn">Utilisateurs
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Liste des Utilisateurs</a>
+      <a href="#">Ajouter un Utilisateur</a>
+      <a href="#">Supprimer un Utilisateur</a>
+        <a href="#">Mise à Jour un Utilisateur</a>
+    </div>
+        
+  </div> 
+    
+            
+</div>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+         <div id="LesDroits" class="LesDroits">
+            <h5> Tous Les Droits Réservés par ZHAIRI AZZEDDINE - 2021©</h5>
+        </div>
+    </form>
+</body>
+</html>
