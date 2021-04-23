@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="Styles/Connexion.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="Icons/icon_Connexion.ico" />
 </head>
 <body>
     
@@ -19,8 +20,8 @@
             <img src="Icons/MotPasse.png" class="MotPasse"/>
             <asp:TextBox  ID="TnomUtilisateur" runat="server" CssClass="TnomUtilisateur" placeholder="Nom Utilisateur"/><br />
             <asp:TextBox  ID="TmotPasse" runat="server" type="password" CssClass="TmotPasse" placeholder="********" /><br /><br /><br /><br /><br /><br />
-            <asp:Button Text="Connexion" CssClass="btnConnexion" runat="server"  /><br /><br /><br /><br />
-            <asp:LinkButton Text="Changer Mot de Passe ?" CssClass="ChangerMotPasse" runat="server" href="" />
+            <asp:Button Text="Connexion" CssClass="btnConnexion" runat="server" ID="BConnexion" OnClick="BConnexion_Click"  /><br /><br /><br /><br />
+            <asp:LinkButton Text="Changer Mot de Passe ?" CssClass="ChangerMotPasse" runat="server" href="ChangementMotPasse.aspx" ID="Link_ChangementMotPasse"  />
 
             </form>
     </div>

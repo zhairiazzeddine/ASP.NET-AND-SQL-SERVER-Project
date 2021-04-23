@@ -1,0 +1,99 @@
+﻿body 
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/arriere_Plan_Connexion.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.loginbox 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 595px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
+}
+
+.logo 
+{
+    width: 80px;
+    overflow: hidden;
+    top: calc(-80px/2);
+    left: calc(53% - 50px);
+    position: absolute;
+}
+
+h3 
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: azure;
+}
+
+.labelusername, .labelpassword 
+{
+    font-weight: bold;
+    color: #fff;
+}
+
+.txtusername, .txtpassword, .BTNenregistrer 
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.txtusername, .txtpassword 
+{
+    border: none;
+    border-bottom: 1.5px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+::placeholder
+{
+    color: rgba(255,255,255,.5);
+}
+
+.BTNenregistrer {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+.BTNenregistrer:hover 
+{
+    background-color: cornflowerblue;
+}
+
+.BTNenregistrer:active 
+{
+   background-color: navy;
+}
+
+.btnchangermdps {
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+.btnchangermdps:hover 
+{
+    text-decoration: underline;
+}

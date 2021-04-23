@@ -10,16 +10,16 @@
 namespace ZHAIRI_CENTER_ASPNET {
     
     
-    public partial class Matiere1 {
+    public partial class Professeur1 {
         
         /// <summary>
-        /// Contrôle GridMatiere.
+        /// Contrôle GridProfesseur.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridMatiere;
+        protected global::System.Web.UI.WebControls.GridView GridProfesseur;
         
         /// <summary>
         /// Contrôle LabelleMessageAffectetion.
@@ -40,13 +40,13 @@ namespace ZHAIRI_CENTER_ASPNET {
         protected global::System.Web.UI.WebControls.Label LabelleMessageErreur;
         
         /// <summary>
-        /// Contrôle Image1.
+        /// Contrôle flesh1.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image flesh1;
         
         /// <summary>
         /// Contrôle Label1.
@@ -76,21 +76,21 @@ namespace ZHAIRI_CENTER_ASPNET {
         protected global::System.Web.UI.WebControls.ImageButton Bimporter;
         
         /// <summary>
-        /// Contrôle Image2.
+        /// Contrôle flesh2.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.Image flesh2;
         
         /// <summary>
-        /// Contrôle LinkButton.
+        /// Contrôle SupprimerTout.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton SupprimerTout;
     }
 }

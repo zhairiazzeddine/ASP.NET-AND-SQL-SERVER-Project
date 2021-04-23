@@ -9,10 +9,18 @@ namespace ZHAIRI_CENTER_ASPNET
 {
     public class Connection
     {
-        public SqlConnection con; // con : variable de connexion 
-        public SqlCommand cmd = new SqlCommand();
+        public SqlConnection con=new SqlConnection("data source=LAPTOP-S2NMGFIQ\\SQLEXPRESS ; initial catalog = ZHAIRI_CENTER_DB ;integrated security=true;"); // con : variable de connexion 
+        public SqlCommand cmd;
         public SqlDataAdapter dap = new SqlDataAdapter();
+        public SqlDataAdapter dap2 = new SqlDataAdapter();
+        public SqlDataAdapter dap3 = new SqlDataAdapter();
+        public SqlDataAdapter dap4 = new SqlDataAdapter();
+
         public DataSet dst = new DataSet();
+        public DataSet dst2 = new DataSet();
+        public DataSet dst3 = new DataSet();
+        public DataSet dst4 = new DataSet();
+
         public DataTable dt = new DataTable();
         public SqlDataReader dr;
 

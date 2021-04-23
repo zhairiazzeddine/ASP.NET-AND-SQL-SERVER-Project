@@ -10,43 +10,61 @@
 namespace ZHAIRI_CENTER_ASPNET {
     
     
-    public partial class Matiere1 {
+    public partial class ChangementMotPasse {
         
         /// <summary>
-        /// Contrôle GridMatiere.
+        /// Contrôle label.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridMatiere;
+        protected global::System.Web.UI.HtmlControls.HtmlForm label;
         
         /// <summary>
-        /// Contrôle LabelleMessageAffectetion.
+        /// Contrôle Tnom.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelleMessageAffectetion;
+        protected global::System.Web.UI.WebControls.TextBox Tnom;
         
         /// <summary>
-        /// Contrôle LabelleMessageErreur.
+        /// Contrôle Tmotpassactuel.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelleMessageErreur;
+        protected global::System.Web.UI.WebControls.TextBox Tmotpassactuel;
         
         /// <summary>
-        /// Contrôle Image1.
+        /// Contrôle TmotPasseNouveau.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.TextBox TmotPasseNouveau;
+        
+        /// <summary>
+        /// Contrôle TconfirmationMotpasse.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TconfirmationMotpasse;
+        
+        /// <summary>
+        /// Contrôle ButtonEnregistrer.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonEnregistrer;
         
         /// <summary>
         /// Contrôle Label1.
@@ -58,39 +76,12 @@ namespace ZHAIRI_CENTER_ASPNET {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Contrôle FileUpload.
+        /// Contrôle Link_RetourConnexion.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
-        
-        /// <summary>
-        /// Contrôle Bimporter.
-        /// </summary>
-        /// <remarks>
-        /// Champ généré automatiquement.
-        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Bimporter;
-        
-        /// <summary>
-        /// Contrôle Image2.
-        /// </summary>
-        /// <remarks>
-        /// Champ généré automatiquement.
-        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
-        
-        /// <summary>
-        /// Contrôle LinkButton.
-        /// </summary>
-        /// <remarks>
-        /// Champ généré automatiquement.
-        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton Link_RetourConnexion;
     }
 }

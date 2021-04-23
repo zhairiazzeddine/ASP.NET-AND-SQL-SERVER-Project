@@ -10,16 +10,16 @@
 namespace ZHAIRI_CENTER_ASPNET {
     
     
-    public partial class Matiere1 {
+    public partial class Classe {
         
         /// <summary>
-        /// Contrôle GridMatiere.
+        /// Contrôle GridClasse.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridMatiere;
+        protected global::System.Web.UI.WebControls.GridView GridClasse;
         
         /// <summary>
         /// Contrôle LabelleMessageAffectetion.
@@ -85,12 +85,12 @@ namespace ZHAIRI_CENTER_ASPNET {
         protected global::System.Web.UI.WebControls.Image Image2;
         
         /// <summary>
-        /// Contrôle LinkButton.
+        /// Contrôle SupprimerTout.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton SupprimerTout;
     }
 }

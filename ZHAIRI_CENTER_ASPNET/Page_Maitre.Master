@@ -8,7 +8,9 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+   
     <link href="Styles/Page_Maitre.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="Icons/iconSite.ico" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,16 +18,16 @@
 
         <div class="navbar">
            
-  <a href="#">Accueil</a>
+  <a href="Accueil.aspx">Accueil</a>
   <a href="#">Eléves</a>
   <a href="#">Inscriptions</a>
             <a href="#">Abssences</a>
             <a href="#">Les Dates</a>
-            <a href="#">Matieres</a>
+            <a href="Matiere.aspx">Matieres</a>
             <a href="#">Réglements</a>
-            <a href="#">Classes</a>
-            <a href="#">Professeurs</a>
-            <a href="#">Cours</a>
+            <a href="Classe.aspx">Classes</a>
+            <a href="Professeur.aspx">Professeurs</a>
+            <a href="Cours.aspx">Cours</a>
   <div class="dropdown">
     <button class="dropbtn">Utilisateurs
       <i class="fa fa-caret-down"></i>
