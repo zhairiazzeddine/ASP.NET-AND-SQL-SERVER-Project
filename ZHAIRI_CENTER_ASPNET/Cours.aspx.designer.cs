@@ -139,6 +139,15 @@ namespace ZHAIRI_CENTER_ASPNET {
         protected global::System.Web.UI.WebControls.GridView GridCours;
         
         /// <summary>
+        /// Contrôle Grid.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Grid;
+        
+        /// <summary>
         /// Contrôle Image1.
         /// </summary>
         /// <remarks>

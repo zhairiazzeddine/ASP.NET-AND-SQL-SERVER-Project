@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page_Maitre.Master" AutoEventWireup="true" CodeBehind="Matiere.aspx.cs"  Inherits="ZHAIRI_CENTER_ASPNET.Matiere1" %>
-
+<asp:Content ID="Content3" ContentPlaceHolderID="title" runat="server">
+    Gestion Matieres
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="Styles/GridView.css" rel="stylesheet" />
     <style type="text/css">
        
         .style5 {
@@ -19,6 +22,14 @@
             width: 547px;
         }
        
+        .auto-style2 {
+            width: 547px;
+            height: 349px;
+        }
+        .auto-style3 {
+            height: 349px;
+        }
+       
     </style>
     <link href="Styles/Style_TextBox.css" rel="stylesheet" />
 </asp:Content>
@@ -26,7 +37,7 @@
     
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
    
     
@@ -41,9 +52,9 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td>
-                <asp:GridView ID="GridMatiere" runat="server" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="ID"
+            <td class="auto-style2"></td>
+            <td class="auto-style3">
+                <asp:GridView ID="GridMatiere"  HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True"  runat="server" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="ID"
                 ShowHeaderWhenEmpty="true"
 
                     OnRowCommand="GridMatiere_RowCommand" OnRowEditing="GridMatiere_RowEditing" 
@@ -80,7 +91,7 @@
                            <asp:TextBox  CssClass="Tbox" ID="txtLibelle" Text='<%# Eval("Libelle") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox CssClass="Tbox" ID="txtLibelleFooter" runat="server" />
+                            <asp:TextBox placeholder="Libelle" CssClass="Tbox" ID="txtLibelleFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     
@@ -92,7 +103,7 @@
                             <asp:TextBox CssClass="Tbox" ID="txtNiveau_Scolaire" Text='<%# Eval("Niveau_Scolaire") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox CssClass="Tbox" ID="txtNiveauScolaireFooter" runat="server" />
+                            <asp:TextBox placeholder="Niveau Scolaire" CssClass="Tbox" ID="txtNiveauScolaireFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Prix (DH)">
@@ -103,7 +114,7 @@
                             <asp:TextBox CssClass="Tbox" ID="txtPrix" Text='<%# Eval("Prix") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox CssClass="Tbox" ID="txtPrixFooter" runat="server" />
+                            <asp:TextBox placeholder="Prix" CssClass="Tbox" ID="txtPrixFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
@@ -125,7 +136,9 @@
             <br />
             <asp:Label ID="LabelleMessageAffectetion" Text="" runat="server" ForeColor="Green" />
             <br />
-            <asp:Label ID="LabelleMessageErreur" Text="" runat="server" ForeColor="Red" />&nbsp;</td>
+            <asp:Label ID="LabelleMessageErreur" Text="" runat="server" ForeColor="Red" />&nbsp;<br />
+        <span style="color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 16.44px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+                Choisissez une tâche...</span></td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
@@ -133,8 +146,8 @@
                 <asp:Image ID="Image1" runat="server" Height="16px" ImageUrl="~/Icons/flesh.gif" Width="16px" />
                
                 <asp:Label ID="Label1" runat="server" BorderColor="Blue" ForeColor="Blue" Text="importation des Donneés depuis fichier Excel"></asp:Label>
-                <asp:FileUpload ID="FileUpload" runat="server" />
-                <asp:ImageButton ID="Bimporter" runat="server" Height="20px" ImageUrl="~/Icons/importation.png" OnClick="ImageButton1_Click" Width="20px" />
+                <asp:FileUpload ID="FileUpload" runat="server" Width="118px" />
+                <asp:ImageButton ID="Bimporter" runat="server" Height="20px" ImageUrl="~/Icons/importation.png" OnClick="ImageButton1_Click" Width="70px" />
                 <br />
                 <asp:Image ID="Image2" runat="server" Height="16px" ImageUrl="~/Icons/flesh.gif" Width="16px" />
                

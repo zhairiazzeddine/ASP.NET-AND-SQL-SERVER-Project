@@ -11,6 +11,14 @@ namespace ZHAIRI_CENTER_ASPNET
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Connection C = new Connection();
+            C.Connecter();
+            lblnBr.Text = C.Executer_Valeur("select Count(*) from Elève");
+            lblnBrProf.Text = C.Executer_Valeur("select Count(*) from Professeur");
+            lblnBrMat.Text = C.Executer_Valeur("select Count(*) from Matiere");
+            lblnBrCla.Text= C.Executer_Valeur("select Count(*) from Classe");
+            C.Déconnecter();
+
 
         }
     }

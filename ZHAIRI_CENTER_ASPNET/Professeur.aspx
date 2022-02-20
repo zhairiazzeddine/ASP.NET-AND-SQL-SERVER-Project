@@ -1,4 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page_Maitre.Master" AutoEventWireup="true" CodeBehind="Professeur.aspx.cs" Inherits="ZHAIRI_CENTER_ASPNET.Professeur1" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="title" runat="server">
+    Gestion des Professeurs
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -7,7 +11,7 @@
     </style>
     <link href="Styles/Style_TextBox.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
      <table >
         <tr>
             <td class="auto-style1">&nbsp;</td>

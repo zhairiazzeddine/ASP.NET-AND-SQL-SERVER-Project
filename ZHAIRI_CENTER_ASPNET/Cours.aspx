@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page_Maitre.Master" AutoEventWireup="true" CodeBehind="Cours.aspx.cs" Inherits="ZHAIRI_CENTER_ASPNET.Cours" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="title" runat="server">
+   Les Cours
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Styles/Style_TextBox.css" rel="stylesheet" />
+    <link href="Styles/GridView.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
             width: 411px;
@@ -12,7 +17,7 @@
     </style>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <table class="style5">
         <tr>
             <td class="auto-style1">&nbsp;</td>
@@ -91,21 +96,29 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style2" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif">
+                <br />
                 Recherche Par Classe<br />
                 <asp:DropDownList ID="DropRClasse" CssClass="Tbox" runat="server" Width="165px">
                 </asp:DropDownList>
-                <asp:ImageButton ID="Brechercher3" runat="server" Height="18px" ImageUrl="~/Icons/Recherche.png" Width="18px" OnClick="Brechercher1_Click" />
+                <asp:ImageButton ID="Brechercher3" runat="server" Height="18px" ImageUrl="~/Icons/Recherche.png" Width="18px" OnClick="Brechercher3_Click" />
             </td>
+            <td class="auto-style2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif">
+                &nbsp;</td>
             <td class="auto-style2">
                 &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">
-                <asp:GridView ID="GridCours" runat="server" AutoGenerateColumns="false" ShowFooter="true" 
+                <asp:GridView ID="GridCours" CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" runat="server" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="ID_CLASSE"
                     
                
-                BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style7" style="margin-left: 0px" Width="767px">
+                BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3"  style="margin-left: 0px" Width="767px" AutoGenerateSelectButton="True" OnSelectedIndexChanging="GridCours_SelectedIndexChanging">
                 <%-- Theme Properties --%>
                 
                 <HeaderStyle BackColor="#3F3F3F" Font-Bold="True" ForeColor="White" />
@@ -120,38 +133,38 @@
                 <Columns>
                     <asp:TemplateField HeaderText="ID Professeur">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("ID_PROFESSEUR") %>' runat="server" />
+                            <asp:Label  BackColor="Transparent"  Text='<%# Eval("ID_PROFESSEUR") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="ID Classe">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("ID_CLASSE") %>' runat="server" />
+                            <asp:Label BackColor="Transparent" Text='<%# Eval("ID_CLASSE") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     
                     <asp:TemplateField HeaderText="Heure Début">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("HEURE_DEBUT") %>' runat="server" />
+                            <asp:Label BackColor="Transparent" Text='<%# Eval("HEURE_DEBUT") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     
                     <asp:TemplateField HeaderText="Heure Fin">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("HEURE_FIN") %>' runat="server" />
+                            <asp:Label BackColor="Transparent" Text='<%# Eval("HEURE_FIN") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
 
                       <asp:TemplateField HeaderText="Jour">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("JOUR") %>' runat="server" />
+                            <asp:Label BackColor="Transparent" Text='<%# Eval("JOUR") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
                      <asp:TemplateField HeaderText="Dureé">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("DUREE") %>' runat="server" />
+                            <asp:Label BackColor="Transparent" Text='<%# Eval("DUREE") %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -161,7 +174,9 @@
             <br />
                 &nbsp;<span style="color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 16.44px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Choisissez une tâche...</span></td>
             <td class="auto-style2">
-                &nbsp;</td>
+                <asp:GridView ID="Grid" runat="server" AutoGenerateColumns="False">
+                </asp:GridView>
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
@@ -172,11 +187,11 @@
                 <br />
                 <asp:Image ID="Image3" runat="server" Height="16px" ImageUrl="~/Icons/flesh.gif" Width="16px" />
                
-                <asp:LinkButton ID="LBModifier" runat="server" Font-Size="Medium">Modifier Cours</asp:LinkButton>
+                <asp:LinkButton ID="LBModifier" runat="server" href="GestionCours.aspx" Font-Size="Medium">Modifier Cours</asp:LinkButton>
                 <br />
                 <asp:Image ID="Image4" runat="server" Height="16px" ImageUrl="~/Icons/flesh.gif" Width="16px" />
                
-                <asp:LinkButton ID="LBSupprimer" runat="server">Supprimer Cours</asp:LinkButton>
+                <asp:LinkButton ID="LBSupprimer" href="GestionCours.aspx" runat="server">Supprimer Cours</asp:LinkButton>
                 <br />
                 <asp:Image ID="Image2" runat="server" Height="16px" ImageUrl="~/Icons/flesh.gif" Width="16px" />
                

@@ -206,7 +206,7 @@ namespace ZHAIRI_CENTER_ASPNET
             using (SqlConnection sqlCon = new SqlConnection(CON))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Donner_Cours where ID_PROFESSEUR='" + Convert.ToInt32( DropRProfesseur.SelectedItem.Value) + "'", sqlCon); //on cherche ici par ID mais l'utilisateur Voir que les nom des professeur
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Donner_Cours where ID_PROFESSEUR='"+DropRProfesseur.SelectedItem.Value+"'", sqlCon); //on cherche ici par ID mais l'utilisateur Voir que les nom des professeur
                 sqlDa.Fill(dtbl);
             }
             if (dtbl.Rows.Count > 0)
@@ -225,6 +225,48 @@ namespace ZHAIRI_CENTER_ASPNET
                 GridCours.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
                 GridCours.Rows[0].Cells[0].Text = "Pas d'enregistrement...!";
                 GridCours.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+
+        protected void Brechercher3_Click(object sender, ImageClickEventArgs e)
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(CON))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Donner_Cours where ID_CLASSE='" + DropRClasse.SelectedItem.Value + "'", sqlCon); //on cherche ici par ID mais l'utilisateur Voir que les nom des professeur
+                sqlDa.Fill(dtbl);
+            }
+            if (dtbl.Rows.Count > 0)
+            {
+                GridCours.DataSource = dtbl;
+                GridCours.DataBind();
+            }
+            else
+            {
+                //si la table est vide ou les variables de recherche n'est pas trouvé
+                dtbl.Rows.Add(dtbl.NewRow());
+                GridCours.DataSource = dtbl;
+                GridCours.DataBind();
+                GridCours.Rows[0].Cells.Clear();
+                GridCours.Rows[0].Cells.Add(new TableCell());
+                GridCours.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                GridCours.Rows[0].Cells[0].Text = "Pas d'enregistrement...!";
+                GridCours.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+
+        protected void GridCours_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(CON))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Matiere where ID='"+Convert.ToInt32(Grid.DataKeys[e.NewSelectedIndex])+"'", sqlCon);
+                sqlDa.Fill(dtbl);
+                Grid.DataSource = dtbl;
+                Grid.DataBind();
+                sqlCon.Close();
             }
         }
     }

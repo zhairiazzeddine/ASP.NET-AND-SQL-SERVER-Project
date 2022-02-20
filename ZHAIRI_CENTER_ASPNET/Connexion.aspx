@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title> ZHAIRI CENTER - Connexion</title>
     <link href="Styles/Connexion.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="Icons/icon_Connexion.ico" />
 </head>

@@ -44,6 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +60,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -72,6 +85,8 @@
     <Content Include="Classe.aspx" />
     <Content Include="Connexion.aspx" />
     <Content Include="Cours.aspx" />
+    <Content Include="Eleve.aspx" />
+    <Content Include="Gestion_Eleve.aspx" />
     <Content Include="GestionCours.aspx" />
     <Content Include="Icons\Actualiser.png" />
     <Content Include="Icons\ajouter.png" />
@@ -82,13 +97,17 @@
     <Content Include="Icons\ButtonModifier.png" />
     <Content Include="Icons\ButtonSupprimer.png" />
     <Content Include="Icons\ButtonSupprimerTous.png" />
+    <Content Include="Icons\Classe.png" />
+    <Content Include="Icons\eleve.png" />
     <Content Include="Icons\enregitrer.png" />
     <Content Include="Icons\flesh.gif" />
     <Content Include="Icons\iconSite.ico" />
     <Content Include="Icons\icon_Connexion.ico" />
     <Content Include="Icons\importation.png" />
+    <Content Include="Icons\Matiere.png" />
     <Content Include="Icons\Modifier.png" />
     <Content Include="Icons\MotPasse.png" />
+    <Content Include="Icons\professeur.png" />
     <Content Include="Icons\Recherche.png" />
     <Content Include="Icons\RmplirTextBox.png" />
     <Content Include="Icons\supprimer.png" />
@@ -96,14 +115,21 @@
     <Content Include="Images\arriere_Plan_Connexion.jpg" />
     <Content Include="Images\Arriere_Plan_Site.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="ImpressionReglement.aspx" />
+    <Content Include="LesDates.aspx" />
     <Content Include="Matiere.aspx" />
     <Content Include="Professeur.aspx" />
+    <Content Include="Reglement.aspx" />
     <Content Include="Styles\ChangementMoPasse.css" />
     <Content Include="Styles\Connexion.css" />
+    <Content Include="Styles\GridView.css" />
     <Content Include="Styles\Matiere2.css" />
     <Content Include="Styles\Page_Maitre.css" />
+    <Content Include="Styles\StyleButton.css" />
     <Content Include="Styles\Style_TextBox.css" />
+    <Content Include="Utilisateur.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accueil.aspx.cs">
@@ -142,12 +168,40 @@
     <Compile Include="Cours.aspx.designer.cs">
       <DependentUpon>Cours.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Eleve.aspx.cs">
+      <DependentUpon>Eleve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eleve.aspx.designer.cs">
+      <DependentUpon>Eleve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Eleve.aspx.cs">
+      <DependentUpon>Gestion_Eleve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion_Eleve.aspx.designer.cs">
+      <DependentUpon>Gestion_Eleve.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GestionCours.aspx.cs">
       <DependentUpon>GestionCours.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GestionCours.aspx.designer.cs">
       <DependentUpon>GestionCours.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImpressionReglement.aspx.cs">
+      <DependentUpon>ImpressionReglement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImpressionReglement.aspx.designer.cs">
+      <DependentUpon>ImpressionReglement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LesDates.aspx.cs">
+      <DependentUpon>LesDates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LesDates.aspx.designer.cs">
+      <DependentUpon>LesDates.aspx</DependentUpon>
     </Compile>
     <Compile Include="LesDates.cs" />
     <Compile Include="Matiere.aspx.cs">
@@ -174,7 +228,28 @@
     </Compile>
     <Compile Include="Professeur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reglement.aspx.cs">
+      <DependentUpon>Reglement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reglement.aspx.designer.cs">
+      <DependentUpon>Reglement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilisateur.aspx.cs">
+      <DependentUpon>Utilisateur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilisateur.aspx.designer.cs">
+      <DependentUpon>Utilisateur.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utilisateur.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -188,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Excel\" />
+    <Folder Include="PHOTOS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

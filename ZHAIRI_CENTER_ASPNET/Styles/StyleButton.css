@@ -1,0 +1,53 @@
+﻿.BUTTONAJOUTER {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+.BUTTONAJOUTER:hover{
+    background-color:cornflowerblue;
+    color:black;
+}
+
+.BUTTONMODIFIER {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+
+    .BUTTONMODIFIER:hover {
+        background-color: orchid;
+        color: black;
+    }
+
+
+.BUTTONSUPPRIMER {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgb(255,9,9);
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+
+    .BUTTONSUPPRIMER:hover {
+        background-color:lightsalmon;
+        color: black;
+    }
